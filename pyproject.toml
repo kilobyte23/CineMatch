@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cinematch"
+version = "2.0.0"
+description = "Movie recommendations on MovieLens: popularity, content, item-kNN, implicit ALS and a hybrid, with offline evaluation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Mohith Avala" }]
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+cinematch = "cinematch.cli:main"
+
+[tool.setuptools]
+packages = ["cinematch"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
