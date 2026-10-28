@@ -1,2 +1,4 @@
 __pycache__/
-cinematch.json
+*.egg-info/
+.venv/
+build/
